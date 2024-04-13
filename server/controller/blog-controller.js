@@ -73,7 +73,7 @@ const deleteBlog = async (req, res) => {
 };
 
 const updateBlog = async (req, res) => {
-  const id = re.params.id;
+  const id = req.params.id;
 
   let curentBlogToUpdate;
 
@@ -86,7 +86,7 @@ const updateBlog = async (req, res) => {
     console.log(error);
 
     return res
-      .send()
+      .status(500)
       .json({ message: "Something went wrong while updating ! Please wait" });
   }
 
