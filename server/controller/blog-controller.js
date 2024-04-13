@@ -94,7 +94,7 @@ const updateBlog = async (req, res) => {
     res.status(500).json({ message: "Unable to update" });
   }
 
-  return res.status(200).json({ curentBlogToUpdate });
+  return res.status(200).json({ curentBlogToUpdate });  // upodate blog has some error fic it
 };
 
 export { fetchListOfBlogs, updateBlog, deleteBlog, addNewBlog };
